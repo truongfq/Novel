@@ -16,9 +16,9 @@ function execute(key, page) {
 
         doc.select(".category-list-container .info-mobile-card").forEach(e => {
             novelList.push({
-                name: e.select("h3").text(),
-                link: e.select("a").first().attr("href"),
-                cover: e.select("img").first().attr("src"),
+                name: e.select(".info-title .name a").text(),
+                link: e.select(".info-title .name a").attr("href"),
+                cover: e.select(".info-image img").attr("src"),
                 host: BASE_URL
             });
         });
